@@ -3,18 +3,19 @@ import './App.css';
 import Header from "./components/Header/Header";
 import Navigation from "./components/Navigation/Navigation";
 import Content from "./components/Content/Content";
-import Footer from "./components/Footer/Footer";
+import {BrowserRouter} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className='app-wrapper'>
-      <Header/>
-      <Navigation/>
-      <Content/>
-      <Footer/>
-    </div>
+    <BrowserRouter>
+      <div className='app-wrapper'>
+        <Header/>
+        <Navigation/>
+        <Content/>
+      </div>
+    </BrowserRouter>
   );
 }
-
 
 export default App;

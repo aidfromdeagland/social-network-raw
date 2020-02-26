@@ -1,0 +1,18 @@
+.Block {
+  position: relative;
+  display: block;
+}
+
+.Image {
+  border-radius: 50%;
+}
+
+.List {
+  position: absolute;
+  display: none;
+  list-style: none;
+}
+
+.List_shown {;
+  display: block;
+}

@@ -1,0 +1,10 @@
+.Block {
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+.Message {
+  width: 100%;
+  height: 120px;
+}
+

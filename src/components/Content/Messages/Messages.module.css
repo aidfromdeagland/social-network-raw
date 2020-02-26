@@ -1,0 +1,15 @@
+.Block {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.Conversations {
+  list-style: none;
+  padding: 0;
+}
+
+.ConversationContent {
+
+}
+
+

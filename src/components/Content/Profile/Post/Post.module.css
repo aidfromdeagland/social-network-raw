@@ -1,0 +1,38 @@
+.Block {
+  margin: 5px;
+  height: auto;
+  display: grid;
+  grid-template-rows: 50px auto 40px;
+}
+
+.Author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.Name {
+
+}
+
+.Avatar {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.Content {
+
+}
+
+.Info {
+  display: flex;
+}
+
+.Date {
+
+}
+
+.LikesCounter {
+  width: 60px;
+}
