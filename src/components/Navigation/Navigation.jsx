@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Navigation.module.css';
 import {NavLink} from 'react-router-dom';
 
-function Navigation() {
+const Navigation = () => {
   return (
     <nav className={styles.Block}>
       <ul className={styles.List}>
@@ -16,7 +16,7 @@ function Navigation() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Navigation;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Dialog.module.css';
 import {NavLink} from "react-router-dom";
 
-function Dialog(props) {
+const Dialog = (props) => {
   return (
     <NavLink className={styles.Block} to={`/messages/${props.id}`}>
       <div className={styles.Info}>
@@ -14,6 +14,6 @@ function Dialog(props) {
       </div>
     </NavLink>
   );
-}
+};
 
 export default Dialog;

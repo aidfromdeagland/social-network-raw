@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Post.module.css';
 
-function Post(props) {
+const Post = (props) => {
   return (
     <div className={styles.Block}>
       <div className={styles.Author}>
@@ -15,6 +15,6 @@ function Post(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Post;

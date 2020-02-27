@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './QuickNav.module.css';
 
-function QuickNav(props) {
+const QuickNav = (props) => {
   return (
     <div className={styles.Block}>
       <img className={styles.Image} src='#' alt='profile avatar'/>
@@ -15,6 +15,6 @@ function QuickNav(props) {
       </ul>
     </div>
   );
-}
+};
 
 export default QuickNav;

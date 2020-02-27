@@ -12,4 +12,33 @@
 
 }
 
+.Message {
+  min-height: 30px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.MessageContent {
+  margin: 0;
+  width: 100%;
+}
+
+.AuthorAvatar {
+  width: 30px;
+  height: 30px;
+  justify-self: center;
+  align-self: center;
+  border-radius: 50%;
+}
+
+.MessageDate {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
 

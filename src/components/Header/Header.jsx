@@ -4,7 +4,7 @@ import Logo from "./Logo/Logo";
 import QuickNav from "./QuickNav/QuickNav";
 import Search from "./Search/Search";
 
-function Header() {
+const Header = () => {
   return (
     <header className={styles.Block}>
       <Logo />
@@ -12,6 +12,6 @@ function Header() {
       <QuickNav/>
     </header>
   );
-}
+};
 
 export default Header;

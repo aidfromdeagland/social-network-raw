@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './Profile.module.css';
 import Post from "./Post/Post";
 
-function Profile(props) {
+const Profile = (props) => {
   return (
     <div className={styles.Block}>
       <img className={styles.Wallpaper} src={props.wallpaperUrl} alt='Profile wallpaper'/>
       <div className={styles.Profile}>
-        <img className={styles.Avatar} src='#' alt='Profile avatar'/>
+        <img className={styles.Avatar} src='https://svgsilh.com/svg/1633249.svg' alt='Profile avatar'/>
         <span className={styles.Name}>My name</span>
         <div className={styles.Posts}>
           <div className={styles.AddPost}>
@@ -28,6 +28,6 @@ function Profile(props) {
 
     </div>
   );
-}
+};
 
 export default Profile;
