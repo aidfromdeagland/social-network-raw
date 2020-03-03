@@ -3,6 +3,13 @@ import styles from './Profile.module.css';
 import Post from "./Post/Post";
 
 const Profile = (props) => {
+  let posts = props.postsData.map(p => <Post key={p.id} id={p.id} name={p.name} date={p.date} content={p.content}
+                                             likesCount={p.likesCount} avatarUrl={p.avatarUrl}/>);
+  let newPostElement = React.createRef();
+  let addPost = () => {
+    alert(newPostElement.current.value)
+  };
+
   return (
     <div className={styles.Block}>
       <img className={styles.Wallpaper} src={props.wallpaperUrl} alt='Profile wallpaper'/>
@@ -11,16 +18,12 @@ const Profile = (props) => {
         <span className={styles.Name}>My name</span>
         <div className={styles.Posts}>
           <div className={styles.AddPost}>
-            <textarea placeholder='Type new post here'></textarea>
-            <button>Add post</button>
+            <textarea className={styles.NewPostTextarea} ref={newPostElement} placeholder='Type new post here'/>
+            <button className={styles.NewPostSend} onClick={addPost}>Add post</button>
           </div>
+          {posts}
           <div className={styles.Wall}>
-            <Post name='Billy Bob' date='Just now' content='You are hired!' likesCount='12'
-                  avatarUrl='https://svgsilh.com/svg/1633249.svg'/>
-            <Post name='John Wayne' date='Two hours ago' content='Make juniors great again!' likesCount='187'
-                  avatarUrl='https://svgsilh.com/svg/1633249.svg'/>
-            <Post name='Big Lebovsky' date='Yesterday, at 9 p.m.' content='Go home!' likesCount='8'
-                  avatarUrl='https://svgsilh.com/svg/1633249.svg'/>
+
           </div>
         </div>
       </div>

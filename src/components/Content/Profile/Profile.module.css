@@ -10,9 +10,31 @@
 }
 
 .Posts {
+  padding: 5px;
+
 }
 
 .AddPost {
+  display: flex;
+  flex-direction: column;
+}
+
+.NewPostTextarea {
+  width: 100%;
+  min-height: 24px;
+  height: fit-content;
+  max-height: 30vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: inline-block;
+  resize: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.NewPostSend {
+  width: max-content;
+  align-self: flex-end;
 }
 
 .Profile {

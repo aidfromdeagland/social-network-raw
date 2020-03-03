@@ -8,7 +8,8 @@ const Content = (props) => {
   return (
     <main className={styles.Block}>
       <Route exact path='/profile'
-             render={() => <Profile wallpaperUrl={'https://mcdn.wallpapersafari.com/medium/90/73/Wnv15y.jpg'} />}/>
+             render={() => <Profile
+               wallpaperUrl={'https://mcdn.wallpapersafari.com/medium/90/73/Wnv15y.jpg'} postsData={props.data.postsData}/>}/>
       <Route exact path='/messages'
              render={() => <Messages dialogData={props.data.dialogData} messagesData={props.data.messagesData} />}/>
     </main>

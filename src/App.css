@@ -4,5 +4,5 @@
 
   display: grid;
   grid-template-columns: minmax(140px, 1fr) minmax(340px, 3fr);
-  grid-template-rows: minmax(60px, max-content) auto minmax(60px, max-content);
+  grid-template-rows: minmax(60px, max-content) auto;
 }

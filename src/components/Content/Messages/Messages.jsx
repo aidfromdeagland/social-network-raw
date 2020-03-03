@@ -13,13 +13,29 @@ const Message = (props) => {
 };
 
 const Messages = (props) => {
+
+  let newMessage = React.createRef();
+  let addMessage = () => {
+    let text = newMessage.current.value;
+    alert(text);
+  };
+
+  let dialogs = props.dialogData.map(d => <Dialog key={d.id} id={d.id} name={d.name}/>);
+  let messages = props.messagesData.map(m => <Message key={m.id} id={m.id} message={m.message} date={m.date}/>);
+
   return (
     <div className={styles.Block}>
       <ol className={styles.Conversations}>
-        {props.dialogData.map(d => <Dialog key={d.id} id={d.id} name={d.name}/>)}
+        {dialogs}
       </ol>
       <div className={styles.ConversationContent}>
-        {props.messagesData.map(m => <Message key={m.id} id={m.id} message={m.message} date={m.date}/>)}
+        <div className={styles.MessagesHistory}>
+          {messages}
+        </div>
+        <div className={styles.MessageInput}>
+          <textarea className={styles.MessageTextarea} ref={newMessage} placeholder='Write a message...'></textarea>
+          <button className={styles.MessageSend} type='button' onClick={addMessage}>Send</button>
+        </div>
       </div>
     </div>
   );
