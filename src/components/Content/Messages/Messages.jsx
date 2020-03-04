@@ -17,7 +17,8 @@ const Messages = (props) => {
   let newMessage = React.createRef();
   let addMessage = () => {
     let text = newMessage.current.value;
-    alert(text);
+    props.addMessage(text);
+    newMessage.current.value = '';
   };
 
   let dialogs = props.dialogData.map(d => <Dialog key={d.id} id={d.id} name={d.name}/>);

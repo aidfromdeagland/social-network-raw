@@ -9,9 +9,16 @@ const Content = (props) => {
     <main className={styles.Block}>
       <Route exact path='/profile'
              render={() => <Profile
-               wallpaperUrl={'https://mcdn.wallpapersafari.com/medium/90/73/Wnv15y.jpg'} postsData={props.data.postsData}/>}/>
+               wallpaperUrl={'https://mcdn.wallpapersafari.com/medium/90/73/Wnv15y.jpg'}
+               postsData={props.data.state.postsData}
+               addPost={props.data.addPost}
+             />}
+      />
       <Route exact path='/messages'
-             render={() => <Messages dialogData={props.data.dialogData} messagesData={props.data.messagesData} />}/>
+             render={() => <Messages
+               dialogData={props.data.state.dialogData}
+               messagesData={props.data.state.messagesData}
+               addMessage={props.data.addMessage}/>}/>
     </main>
   );
 };

@@ -7,7 +7,9 @@ const Profile = (props) => {
                                              likesCount={p.likesCount} avatarUrl={p.avatarUrl}/>);
   let newPostElement = React.createRef();
   let addPost = () => {
-    alert(newPostElement.current.value)
+    let newPost = newPostElement.current.value;
+    props.addPost(newPost);
+    newPostElement.current.value = '';
   };
 
   return (
