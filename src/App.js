@@ -10,7 +10,13 @@ function App(props) {
     <div className='app-wrapper'>
       <Header/>
       <Navigation/>
-      <Content data={props}/>
+      <Content
+        state={props.state}
+        addPost={props.addPost}
+        addMessage={props.addMessage}
+        updateNewPostText={props.updateNewPostText}
+        updateNewMessage={props.updateNewMessage}
+      />
     </div>
   );
 }

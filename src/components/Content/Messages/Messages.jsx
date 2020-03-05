@@ -21,6 +21,11 @@ const Messages = (props) => {
     newMessage.current.value = '';
   };
 
+  let onMessageChange = () => {
+    let newMessageText = newMessage.current.value;
+    props.updateNewMessage(newMessageText);
+  };
+
   let dialogs = props.dialogData.map(d => <Dialog key={d.id} id={d.id} name={d.name}/>);
   let messages = props.messagesData.map(m => <Message key={m.id} id={m.id} message={m.message} date={m.date}/>);
 
@@ -34,7 +39,8 @@ const Messages = (props) => {
           {messages}
         </div>
         <div className={styles.MessageInput}>
-          <textarea className={styles.MessageTextarea} ref={newMessage} placeholder='Write a message...'></textarea>
+          <textarea className={styles.MessageTextarea} ref={newMessage} placeholder='Write a message...'
+                    onChange={onMessageChange}/>
           <button className={styles.MessageSend} type='button' onClick={addMessage}>Send</button>
         </div>
       </div>

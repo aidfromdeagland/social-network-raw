@@ -10,15 +10,20 @@ const Content = (props) => {
       <Route exact path='/profile'
              render={() => <Profile
                wallpaperUrl={'https://mcdn.wallpapersafari.com/medium/90/73/Wnv15y.jpg'}
-               postsData={props.data.state.postsData}
-               addPost={props.data.addPost}
+               postsData={props.state.profilePage.postsData}
+               newPostText={props.state.profilePage.newPostText}
+               updateNewPostText={props.updateNewPostText}
+               addPost={props.addPost}
              />}
       />
       <Route exact path='/messages'
              render={() => <Messages
-               dialogData={props.data.state.dialogData}
-               messagesData={props.data.state.messagesData}
-               addMessage={props.data.addMessage}/>}/>
+               dialogData={props.state.messagesPage.dialogData}
+               messagesData={props.state.messagesPage.messagesData}
+               addMessage={props.addMessage}
+               updateNewMessage={props.updateNewMessage}
+             />}
+      />
     </main>
   );
 };
